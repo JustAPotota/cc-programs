@@ -50,4 +50,8 @@ button:onClick(function()
     basalt.debug("Clicked")
 end)
 
+local x_textfield = ui:addTextfield():setPosition(1, 1)
+local y_textfield = ui:addTextfield():setPosition(1, 2)
+local z_textfield = ui:addTextfield():setPosition(1, 3)
+
 basalt.autoUpdate()
