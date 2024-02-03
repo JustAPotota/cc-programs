@@ -33,4 +33,22 @@ function ui:text_input(text, size)
 
 end
 
-return M
+local function is_module()
+    return pcall(debug.getlocal, 4, 1)
+end
+
+if is_module() then
+    return M
+end
+
+local args = { ... }
+if args[2] == "update" then
+    local response = http.get("https://raw.githubusercontent.com/JustAPotota/cc-programs/main/imtui.lua")
+    if response then
+        local text = response.readAll()
+        local file = fs.open(args[1], "w")
+        if file then
+            file.write(text)
+        end
+    end
+end
