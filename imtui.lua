@@ -1,5 +1,3 @@
--- :)
-
 local M = {}
 
 local function new_ui()
@@ -45,11 +43,14 @@ end
 
 local args = { ... }
 if args[1] == "update" then
+    print("Fetching latest version...")
     local response = http.get("https://raw.githubusercontent.com/JustAPotota/cc-programs/main/imtui.lua")
     if response then
+        print("Reading...")
         local text = response.readAll()
         local file = fs.open(shell.getRunningProgram(), "w")
         if file then
+            print("Saving...")
             file.write(text)
         end
     end
