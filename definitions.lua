@@ -16,3 +16,10 @@ function rednet.open(modem) end
 
 ---@return boolean
 function rednet.isOpen() end
+
+term = {}
+
+---@param text string
+function term.write(text) end
+
+function term.clear() end
