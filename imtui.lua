@@ -1,5 +1,9 @@
 local M = {}
 
+local function new_ui()
+    return {}
+end
+
 function M.run(draw)
     local ui = new_ui()
     draw(ui)
