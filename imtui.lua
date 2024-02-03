@@ -42,11 +42,11 @@ if is_module() then
 end
 
 local args = { ... }
-if args[2] == "update" then
+if args[1] == "update" then
     local response = http.get("https://raw.githubusercontent.com/JustAPotota/cc-programs/main/imtui.lua")
     if response then
         local text = response.readAll()
-        local file = fs.open(args[1], "w")
+        local file = fs.open(shell.getRunningProgram(), "w")
         if file then
             file.write(text)
         end
