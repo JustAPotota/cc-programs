@@ -23,3 +23,20 @@ term = {}
 function term.write(text) end
 
 function term.clear() end
+
+---@param x number
+---@param y number
+function term.setCursorPos(x, y) end
+
+---@return number
+function term.getBackgroundColor() end
+
+---@param color number
+function term.setBackgroundColor(color) end
+
+---@return number x, number y
+function term.getCursorPos() end
+
+colors = {}
+colors.gray = 0x80
+colors.black = 0x8000

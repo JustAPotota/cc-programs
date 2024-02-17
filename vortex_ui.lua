@@ -48,8 +48,8 @@ end
 
 local tardis = getTardis()
 if not tardis then
-    printError("Computer must be placed next to the Vortex Interface")
-    return
+    -- printError("Computer must be placed next to the Vortex Interface")
+    -- return
 end
 
 if not openRednet() then
